@@ -1,0 +1,22 @@
+[project]
+name = "maintidoc"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.4.7",
+    "langchain-ollama>=1.1.0",
+    "llama-index-core>=0.14.25",
+    "llama-index-embeddings-ollama>=0.10.0",
+    "llama-index-readers-file>=0.7.0",
+    "llama-index-vector-stores-postgres>=0.9.0",
+    "ollama>=0.6.3",
+    "pillow>=13.0.0",
+    "pymupdf>=2.0",
+    "streamlit>=1.66.1",
+    "torch>=2.14.1",
+    "transformers>=5.21.0",
+]
+
+[tool.uv]
+# NLTK (utilisé par LlamaIndex) refuse les fichiers installés en lien physique : on copie
+link-mode = "copy"
